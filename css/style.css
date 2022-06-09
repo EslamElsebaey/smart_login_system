@@ -1,0 +1,123 @@
+/* index page */
+
+
+.main-page{
+    background-color: #24353F;
+    padding-top: 100px;
+    height: 100vh;
+}
+.myform{
+    box-shadow: -5px 2px 54px -9px rgb(0 0 0);
+    padding: 40px 30px;
+}
+
+.myform h2{
+    color: #17a2b8;
+    font-size: 2.7rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+input.form-control {
+    border: 1px solid #ced4da;
+    color: #fff;
+      background-color: #24353F;
+}
+input.form-control:focus{
+    border: 1px solid #17a2b8;
+    box-shadow: none;
+     color: #fff;
+       background-color: #24353F;
+}
+input.form-control::placeholder{
+    color: #ced4da;
+}
+.form-control , #logInBtn{
+    background-color: #24353F;
+    color: #17a2b8;
+     border: 1px solid #17a2b8;
+     font-size: 17px;
+     transition: all ease .3s;
+     border-radius: 4px;
+     cursor: pointer;
+}
+.form-control:focus{
+      background-color: #24353F;
+      color: #fff;
+     box-shadow: none;
+}
+button.form-control:hover , #logInBtn:hover{
+     background-color: #17a2b8;
+     color: #fff;
+     box-shadow: none;
+}
+.myform p{
+    font-size: 17px;
+}
+.myform p a:hover{
+text-decoration: underline !important;
+}
+@media screen and (min-width:1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+        max-width: 900px;
+        
+    }
+}
+
+
+/* profile page  */
+
+
+.nav button{
+    background-color: #24353F;
+    color: #ced4da;
+    padding: 7px 6px ;
+    border-radius: 4px;
+    font-size: 17px;
+    transition: all ease .4s;
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      box-shadow: -5px 2px 54px -9px rgb(0 0 0);
+      padding: 10px 100px;
+}
+
+.nav a:first-child{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.welcome{
+    margin: auto;
+    padding: 50px 0;
+    background-color: #24353F;
+     box-shadow: -5px 2px 54px -9px rgb(0 0 0);
+     text-align: center;
+     color: #17a2b8;
+     width: 100%;
+}
+.welcome h2{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+@media screen and (min-width:300px) {
+    .nav{
+        padding: 10px 30px;
+       
+    }
+}
+@media screen and (min-width:768px) {
+    .nav{
+        padding: 10px 100px;
+       
+    }
+}

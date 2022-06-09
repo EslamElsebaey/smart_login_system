@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Sign up Page</title>
+  </head>
+
+  <body>
+    <div class="main-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="myform text-center">
+              <h2>Smart Login System</h2>
+              <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Enter your Name"
+                id="nameInput"
+              />
+              <input
+                type="email"
+                oninput="emailValidation ()"
+                class="form-control mb-3"
+                placeholder="Enter your Email"
+                id="emailInput"
+              />
+              <input
+                type="password"
+                class="form-control mb-3"
+                placeholder="Enter your Password"
+                id="passwordInput"
+              />
+              <div class="exist"></div>
+              <button
+                id="signUpBtn"
+                onclick="signUp ()"
+                class="form-control mb-4"
+              >
+                Sign up
+              </button>
+              <p class="text-white">
+                You have an account?
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Sign In</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
