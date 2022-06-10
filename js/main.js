@@ -1,17 +1,17 @@
-// selecting variables
+// selecting letiables
 
-var nameInput = document.getElementById("nameInput");
-var emailInput = document.getElementById("emailInput");
-var passwordInput = document.getElementById("passwordInput");
-var signUpBtn = document.getElementById("signUpBtn");
-var logInBtn = document.getElementById("logInBtn");
-var exist = document.querySelector(".exist");
-var signInEmail = document.getElementById("signInEmail");
-var signInPassword = document.getElementById("signInPassword");
+let nameInput = document.getElementById("nameInput");
+let emailInput = document.getElementById("emailInput");
+let passwordInput = document.getElementById("passwordInput");
+let signUpBtn = document.getElementById("signUpBtn");
+let logInBtn = document.getElementById("logInBtn");
+let exist = document.querySelector(".exist");
+let signInEmail = document.getElementById("signInEmail");
+let signInPassword = document.getElementById("signInPassword");
 
 // local storage
 
-var usersArray;
+let usersArray;
 
 if (localStorage.getItem("users") == null) {
   usersArray = [];
@@ -34,7 +34,7 @@ function isEmpty() {
 //  is email existed ?
 
 function isEmailExisted() {
-  for (var i = 0; i < usersArray.length; i++) {
+  for (let i = 0; i < usersArray.length; i++) {
     if (usersArray[i].email == emailInput.value) {
       return false;
     }
@@ -47,7 +47,7 @@ function signUp() {
   if (isEmpty() == false) {
     exist.innerHTML = `<h3 class="text-danger mb-3 mt-3">All inputs are required</h3>`;
   } else if (emailValidation() == true) {
-    var userObj = {
+    let userObj = {
       name: nameInput.value,
       email: emailInput.value,
       password: passwordInput.value,
@@ -94,7 +94,7 @@ function logIn() {
   if (isLoginEmpty() == false) {
     exist.innerHTML = `<h3 class="text-danger mb-3 mt-3"> All Inputs Are Required</h3>`;
   } else {
-    for (var i = 0; i < usersArray.length; i++) {
+    for (let i = 0; i < usersArray.length; i++) {
       if (
         usersArray[i].email == signInEmail.value &&
         usersArray[i].password == signInPassword.value
@@ -120,7 +120,7 @@ function logOut() {
 // email validation
 
 function emailValidation() {
-  var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+  let emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
   if (emailRegex.test(emailInput.value)) {
     emailInput.classList.add("is-valid");
     emailInput.classList.remove("is-invalid");
@@ -140,7 +140,7 @@ function emailValidation() {
 
 function sayWelcome() {
   if (location.pathname == "/profile.html") {
-    var welcome = document.querySelector(".welcome");
+    let welcome = document.querySelector(".welcome");
     welcome.innerHTML = `<h1>welcome ${localStorage.getItem(
       "sessionuser"
     )}</h1>`;
